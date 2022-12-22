@@ -38,7 +38,15 @@ class LaserSaberController extends Controller
      */
     public function store(StoreLaserSaberRequest $request)
     {
-        dd($request->all());
+        //dd($request->all());
+        $new_saber = new LaserSaber();
+        $new_saber->name = $request['name'];
+        $new_saber->description = $request['description'];
+        $new_saber->image = $request['image'];
+        $new_saber->price = $request['price'];
+        $new_saber->save();
+
+        return to_route('sabers.index');
     }
 
     /**
@@ -58,9 +66,10 @@ class LaserSaberController extends Controller
      * @param  \App\Models\LaserSaber  $laserSaber
      * @return \Illuminate\Http\Response
      */
-    public function edit(LaserSaber $laserSaber)
+    public function edit(LaserSaber $saber)
     {
-        //
+
+        return view('admin.sabers.edit', compact('saber'));
     }
 
     /**

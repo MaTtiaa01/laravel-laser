@@ -31,7 +31,11 @@
                             <td>{{$saber->image}}</td>
                             <td>{{$saber->description}}</td>
                             <td>{{$saber->price}}</td>
-                            <td>view edit delite</td>
+                            <td>
+                                <a href="#">view</a>
+                                <a href="{{route('sabers.edit',$saber->id)}}">edit</a>
+                                <a href="#">delete</a>
+                            </td>
                         </tr>
                         @empty
                         <tr>
