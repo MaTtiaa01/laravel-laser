@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\LaserSaber;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LaserSaberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('admin/sabers', LaserSaberController::class);
