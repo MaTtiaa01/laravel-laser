@@ -34,7 +34,12 @@
                             <td>
                                 <a href="{{route('sabers.show',$saber->id)}}">view</a>
                                 <a href="{{route('sabers.edit',$saber->id)}}">edit</a>
-                                <a href="{{route('sabers.destroy',$saber->id)}}">delete</a>
+                                <form action="{{route('sabers.destroy',$saber->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-primary">Delete</button>
+                                </form>
+
                             </td>
                         </tr>
                         @empty

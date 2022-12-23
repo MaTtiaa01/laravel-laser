@@ -98,9 +98,9 @@ class LaserSaberController extends Controller
      * @param  \App\Models\LaserSaber  $laserSaber
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LaserSaber $laserSaber)
+    public function destroy(LaserSaber $saber)
     {
-        $laserSaber->delete();
+        $saber->delete();
         return to_route('sabers.index');
     }
 }
