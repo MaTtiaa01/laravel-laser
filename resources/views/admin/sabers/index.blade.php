@@ -34,7 +34,7 @@
                             <td>
                                 <a href="{{route('sabers.show',$saber->id)}}">view</a>
                                 <a href="{{route('sabers.edit',$saber->id)}}">edit</a>
-                                <a href="#">delete</a>
+                                <a href="{{route('sabers.destroy',$saber->id)}}">delete</a>
                             </td>
                         </tr>
                         @empty

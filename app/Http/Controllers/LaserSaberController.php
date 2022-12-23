@@ -100,6 +100,7 @@ class LaserSaberController extends Controller
      */
     public function destroy(LaserSaber $laserSaber)
     {
-        //
+        $laserSaber->delete();
+        return to_route('sabers.index');
     }
 }
