@@ -81,7 +81,15 @@ class LaserSaberController extends Controller
      */
     public function update(UpdateLaserSaberRequest $request, LaserSaber $laserSaber)
     {
-        //
+        $data = [
+            'name' => $request['name'],
+            'description' => $request['description'],
+            'image' => $request['image'],
+            'price' => $request['price'],
+        ];
+
+        $laserSaber->update($data);
+        return to_route('sabers.index');
     }
 
     /**

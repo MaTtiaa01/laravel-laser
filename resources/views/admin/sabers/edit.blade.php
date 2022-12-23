@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="conatiner">
+<div class="container py-5">
     <h1>Edit</h1>
     <form action="{{route('sabers.update',$saber->id)}}" method="post">
         @csrf
@@ -31,7 +31,7 @@
             <small id="helpId" class="text-muted">Help text</small>
         </div>
 
-        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{{route('sabers.update')}}" type="submit" class="btn btn-primary">Save</a>
     </form>
 </div>
 

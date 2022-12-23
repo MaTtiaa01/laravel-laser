@@ -3,6 +3,7 @@
 use App\Models\LaserSaber;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LaserSaberController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,6 @@ use App\Http\Controllers\LaserSaberController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index'])->name('home');
 
 Route::resource('admin/sabers', LaserSaberController::class);

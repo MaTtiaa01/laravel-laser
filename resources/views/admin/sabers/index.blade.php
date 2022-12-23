@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="conatiner">
+<div class="container py-5">
 
     <a href="{{route('sabers.create')}}" class="btn btn-primary">
         Add
