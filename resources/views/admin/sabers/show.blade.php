@@ -2,6 +2,18 @@
 
 @section('content')
 
-<h1>show</h1>
+<div class="container">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h1>{{$saber->name}}</h1>
+            </div>
+            <div class="card-body">
+                <img src="{{$saber->image}}" alt="">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection

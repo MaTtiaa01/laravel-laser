@@ -55,9 +55,9 @@ class LaserSaberController extends Controller
      * @param  \App\Models\LaserSaber  $laserSaber
      * @return \Illuminate\Http\Response
      */
-    public function show(LaserSaber $laserSaber)
+    public function show(LaserSaber $saber)
     {
-        //
+        return view('admin.sabers.show', compact('saber'));
     }
 
     /**
