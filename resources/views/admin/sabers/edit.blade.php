@@ -31,7 +31,7 @@
             <small id="helpId" class="text-muted">Help text</small>
         </div>
 
-        <a href="{{route('sabers.update')}}" type="submit" class="btn btn-primary">Save</a>
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
 

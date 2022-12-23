@@ -79,7 +79,7 @@ class LaserSaberController extends Controller
      * @param  \App\Models\LaserSaber  $laserSaber
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateLaserSaberRequest $request, LaserSaber $laserSaber)
+    public function update(UpdateLaserSaberRequest $request, LaserSaber $saber)
     {
         $data = [
             'name' => $request['name'],
@@ -88,7 +88,7 @@ class LaserSaberController extends Controller
             'price' => $request['price'],
         ];
 
-        $laserSaber->update($data);
+        $saber->update($data);
         return to_route('sabers.index');
     }
 
